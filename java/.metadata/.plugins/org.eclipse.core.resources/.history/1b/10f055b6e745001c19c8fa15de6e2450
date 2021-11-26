@@ -1,0 +1,11 @@
+package n4_udp;
+
+import java.net.DatagramSocket;
+
+public class UDPSendExample {
+
+	public static void main(String[] args) {
+		DatagramSocket datagramSocket = new DatagramSocket();
+	}	
+
+}

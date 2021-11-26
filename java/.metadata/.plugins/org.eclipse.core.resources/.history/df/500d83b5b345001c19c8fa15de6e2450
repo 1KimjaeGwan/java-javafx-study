@@ -1,0 +1,16 @@
+package n1_inetaddress_url;
+
+import java.net.*;
+
+public class InetAddressExample {
+
+	public static void main(String[] args) {
+		// InetAddress
+		// 연결이나 지정된 위치의 IP또는 port정보를 저장하는 class
+		
+		// Local / 내컴퓨터 정보 확인
+		// java.net.*
+		InetAddress address = InetAddress.getLocalHost();
+	}
+
+}

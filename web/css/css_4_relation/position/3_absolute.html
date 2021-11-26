@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>웹 프로그래밍 기초</title>
+  <link rel="stylesheet" href="3_absolute.css">
+</head>
+<body>
+  <div class="wrap">
+    <!-- position static box 요소 -->
+    <div class="box1">
+        <h1>static > absolute </h1>
+    </div>
+    <!--  static 부모 요소-->
+    <div class="position_static_parent">
+      <!-- absolute 자식 요소 -->
+      <div class="position_absolute_child marginTop marginBottom"></div>
+      <div class="position_absolute_child marginTop marginBottom"></div>
+    </div>
+    <div class="box1">
+        <h1>static > absolute </h1>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- position static box 요소 -->
+    <div class="box1">
+        <h1>relative > absolute </h1>
+    </div>
+    <!--  relative 부모 요소-->
+    <div class="position_relative_parent">
+      <!-- absolute 자식 요소 -->
+      <div class="position_absolute_child marginTop marginBottom"></div>
+      <div class="position_absolute_child marginTop marginBottom"></div>
+    </div>
+    <div class="box1">
+        <h1>relative > absolute </h1>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- position static box 요소 -->
+    <div class="box1">
+          <h1>absolute > absolute </h1>
+    </div>
+    <!-- ablsoute 부모 요소-->
+    <div class="position_absolute_parent">
+      <!-- absolute 자식 요소 -->
+      <div class="position_absolute_child marginTop marginBottom"></div>
+      <div class="position_absolute_child marginTop marginBottom"></div>
+    </div>
+    <div class="box1">
+          <h1>absolute > absolute </h1>
+    </div>
+  </div>
+</body>
+</html>

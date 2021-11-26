@@ -1,0 +1,60 @@
+<!-- 02_document.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<script></script>
+</head>
+<body>
+    <!-- form>((input:text.tagClass#selectId[value='$'])*7
+    +input:button.tagClass#selectId[value='button']) -->
+    <form action="">
+        <input type="text" name="name1" id="selectId" class="tagClass" value="1">
+        <input type="text" name="name2" id="selectId" class="tagClass" value="2">
+        <input type="text" name="name3" id="selectId" class="tagClass" value="3">
+        <input type="text" name="name4" id="selectId" class="tagClass" value="4">
+        <input type="text" name="name5" id="selectId" class="tagClass" value="5">
+        <input type="text" name="name6" id="selectId" class="tagClass" value="6">
+        <input type="text" name="name7" id="selectId" class="tagClass" value="7">
+        <input type="button" value="button" class="tagClass" id="selectId">
+    </form>
+
+    <script>
+        // name값이 일치하는 태그 요소들을 배열로 반환
+        let nameArray = document.getElementsByName("name1");
+        document.write(`nameArray : ${nameArray} <br/>`);
+        document.write(`nameArray : ${nameArray.length} <br/>`);
+
+        // tag 이름이 일치하는 태그 요소들을 배열로 반환
+        let tagArray = document.getElementsByTagName("input");
+        document.write(`tagArray 0 : ${tagArray[0].value}<br/>`);
+        for(let i=0; i < tagArray.length; i++){
+            document.write(`tagArray ${i} : ${tagArray[i].value}<br/>`);
+        }
+        // class의 속성값이 일치하는 태그 요소들을 배열로 반환
+        let classArray = document.getElementsByClassName("tagClass");
+        for(let i=0; i < classArray.length; i++){
+            document.write(`classArray ${i} : ${classArray[i].value}<br/>`);
+            // 해당 태그요소의 속성들 중에 value 속상값을 변경
+            classArray[i].value = (i * 20);
+        }
+
+        let querySelectAll =
+            document.querySelectorAll("input[type='button']");
+        document.write(
+            `querySelectAll length : ${querySelectAll.length}`
+        );
+        querySelectAll[0].value = "버튼";
+
+        // 매개변수로 전달된 값이 id 속성값과 일치하는 요소를 반환
+        let id = document.getElementById('selectId');
+        console.log(id);
+        document.write(`selectId value : ${id.value} <br/>`);
+
+        // 매개변수로 전달된 값이 css 선택자와 일치하는 요소를 찾아 반환
+        let selector = document.querySelector("#selectId");
+        document.write(`querySelector : ${selector.value}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!-- 210917_3.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<style>
+    body{
+        color: white;
+    }
+
+    div#wrapper{
+        width: 900px;
+        min-height: 300px;
+        margin: 0 auto;
+    }
+
+    header, footer, nav, aside, section{
+        border: 1px solid #999;
+        padding: 10px;
+        margin: 5px;
+    }   
+
+    header{
+        background-color: skyblue;
+    }
+
+    nav, aside{
+        width: 100px;
+        background-color: pink;
+    }
+
+    nav, aside, section{
+        float: left;
+        height: 500px;
+    }
+
+    footer{
+        background-color: skyblue;
+        clear: both;
+    }
+
+    article{
+        background-color: gray;
+        width:90%;
+        margin-left: 20px;
+    }
+
+    section{
+        background-color: lightgreen;
+        width: 604px;
+    }
+
+    nav ul{
+        list-style: none;
+        padding: 0;
+    }
+
+    nav ul li{
+        text-align: center;
+        color: black;
+    }
+
+    nav ul li:hover{
+        color: white;
+    }
+
+</style>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header>p{header} -->
+        <header>
+            <p>header</p>
+        </header>
+        <main>
+            <nav>
+                <p>nav</p>
+                <!-- ul>li{menu-$}*3 -->
+                <ul>
+                    <li>menu-1</li>
+                    <li>menu-2</li>
+                    <li>menu-3</li>
+                </ul>
+            </nav>
+            <!-- section>p{section}+article -->
+            <section>
+                <p>section</p>
+                <article>
+                    <p>article</p>
+                    <!-- lorem100 -->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ratione quod nesciunt, esse veritatis beatae officia illo tempora error sequi dicta molestias consequuntur veniam a natus magni et necessitatibus provident iusto illum aspernatur aperiam exercitationem? Perspiciatis error velit id facere eos perferendis est laboriosam soluta ullam commodi dolorem obcaecati officia minus quisquam, modi voluptatum facilis aliquid. Consectetur officiis est, voluptate maxime odit sed quidem fuga temporibus perspiciatis, eos velit natus minima accusamus et magni. Alias qui officiis minima voluptatem porro sed consectetur aliquid maiores, saepe possimus in aperiam nesciunt nisi quibusdam tenetur beatae quam quas temporibus veniam, error officia. Quam!</p>
+                </article>
+            </section>
+            <!-- aside>p{aside} -->
+            <aside>
+                <p>aside</p>
+            </aside>
+            <footer>
+                <p>footer</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+
+<HBox xmlns:fx="http://javafx.com/fxml/1">
+	<childrea>
+		<ImageView id="imgMessage" fitHeight="30"
+		fitWidth="30" preserveRatio="true" />
+	</childrea>
+</HBox>
+

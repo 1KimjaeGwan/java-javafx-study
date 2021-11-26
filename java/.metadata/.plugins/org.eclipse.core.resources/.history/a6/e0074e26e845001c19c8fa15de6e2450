@@ -1,0 +1,22 @@
+package n4_udp;
+
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+
+public class UDPSendExample {
+
+	public static void main(String[] args) throws Exception {
+		DatagramSocket datagramSocket = new DatagramSocket();
+		Thread t = new Thread() {
+			@Override
+			public void run() {
+				System.out.println("[수신 시작]");
+				while(true) {
+					DatagramPacket packet 
+						= new DatagramPacket(new byte[100],100);
+				}
+			}
+		};
+	}	
+
+}

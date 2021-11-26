@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>웹 프로그래밍 기초</title>
+  <link rel="stylesheet" href="2_relative.css">
+</head>
+<body>
+  <div class="wrap">
+    <!-- position static box 요소 -->
+    <div class="box1">
+        <h1>static > relative </h1>
+    </div>
+    <!--  static 부모 요소-->
+    <div class="position_static_parent">
+      <!-- relative 자식 요소 -->
+      <div class="position_relative_child marginTop marginBottom"></div>
+      <div class="position_relative_child marginTop marginBottom"></div>
+    </div>
+    <div class="box1">
+        <h1>static > relative </h1>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- position static box 요소 -->
+    <div class="box1">
+        <h1>relative > relative </h1>
+    </div>
+    <!--  relative 부모 요소-->
+    <div class="position_relative_parent">
+      <!-- relative 자식 요소 -->
+      <div class="position_relative_child marginTop marginBottom"></div>
+      <div class="position_relative_child marginTop marginBottom"></div>
+    </div>
+    <div class="box1">
+        <h1>relative > relative </h1>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- position static box 요소 -->
+    <div class="box1">
+          <h1>absolute > relative </h1>
+    </div>
+    <!-- ablsoute 부모 요소-->
+    <div class="position_absolute_parent">
+      <!-- relative 자식 요소 -->
+      <div class="position_relative_child marginTop marginBottom"></div>
+      <div class="position_relative_child marginTop marginBottom"></div>
+    </div>
+    <div class="box1">
+          <h1>absolute > relative </h1>
+    </div>
+  </div>
+</body>
+</html>

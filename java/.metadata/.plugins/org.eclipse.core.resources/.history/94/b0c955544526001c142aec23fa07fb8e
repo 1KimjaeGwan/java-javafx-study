@@ -1,0 +1,23 @@
+package exam;
+
+import java.util.Scanner;
+
+public class Abc {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String s = "홍길동";
+	
+		System.out.println("사원명을 입력하세요?");
+		String id = sc.next();
+		System.out.println("시급을 입력하세요?");
+		int a = sc.nextInt();
+		System.out.println("근무시간을 입력하세요?");
+		int b = sc.nextInt();
+		
+		
+		System.out.println("급여금액 : " a*b);
+
+	}
+
+}

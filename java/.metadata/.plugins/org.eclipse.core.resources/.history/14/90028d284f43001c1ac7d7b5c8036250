@@ -1,0 +1,9 @@
+package t01_create_thread;
+
+public class SingleThread {
+
+	public static void main(String[] args) {
+
+	}
+
+}

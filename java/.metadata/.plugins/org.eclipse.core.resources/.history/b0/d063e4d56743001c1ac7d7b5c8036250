@@ -1,0 +1,13 @@
+package t05_control_method.join;
+
+public class JoinExample {
+
+	public static void main(String[] args) {
+		System.out.println("Main 시작");
+		Thread t1 = new SumThread("SumThread-1");
+		t1.start();
+		
+		System.out.println("Main 종료");
+	}
+
+}

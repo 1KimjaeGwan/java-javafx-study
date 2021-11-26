@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;c.return_type.RadmaReturnExam&apos; to &apos;RamdaReturnExam&apos;&#x0D;&#x0A;- Original project: &apos;15_ramda_ex&apos;&#x0D;&#x0A;- Original element: &apos;c.return_type.RadmaReturnExam&apos;&#x0D;&#x0A;- Renamed element: &apos;c.return_type.RamdaReturnExam&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;RadmaReturnExam&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;c.return_type{RadmaReturnExam.java[RadmaReturnExam" matchStrategy="1" name="RamdaReturnExam" qualified="false" references="true" similarDeclarations="false" stamp="1634713608927" textual="false" version="1.0"/>
+</session>

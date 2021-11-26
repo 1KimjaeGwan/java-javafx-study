@@ -1,0 +1,7 @@
+package t06_daemon;
+
+public class ParentThread extends Thread{
+	
+	public void run() {}
+
+}

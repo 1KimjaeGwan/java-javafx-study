@@ -1,0 +1,17 @@
+package exam;
+
+import java.util.Scanner;
+
+public class Abc {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("첫번째 정수 : " );
+		int a = sc.nextInt();
+		System.out.println("두번째 정수 : " );
+		int b = sc.nextInt();
+		System.out.println("큰수는 "+Math.max(a,b));
+		
+	}
+}

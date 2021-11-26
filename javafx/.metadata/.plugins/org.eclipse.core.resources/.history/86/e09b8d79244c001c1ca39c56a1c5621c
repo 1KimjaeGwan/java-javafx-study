@@ -1,0 +1,6 @@
+/* back.css */
+VBox{
+	-fx-border-color:black;
+	-fx-pref-width:100px;
+	-fx-pref-height:100px;
+}

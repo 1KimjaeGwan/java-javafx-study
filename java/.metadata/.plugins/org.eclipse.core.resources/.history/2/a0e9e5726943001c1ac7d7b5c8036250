@@ -1,0 +1,21 @@
+package t05_control_method.yield;
+
+class ThreadA extends Thread{
+	boolean stop = true;	// 스레드 종료 flag
+	boolean work = true;	// 작업실행 flag
+	
+	public void run() {
+		while(stop) {
+			
+		}
+		System.out.println("Thread A 작업 완료");
+	}
+}
+
+public class YieldExample {
+
+	public static void main(String[] args) {
+
+	}
+
+}

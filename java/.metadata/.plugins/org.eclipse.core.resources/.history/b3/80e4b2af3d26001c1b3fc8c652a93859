@@ -1,0 +1,15 @@
+package exam;
+
+public class sadf {
+
+	public static void main(String[] args) {
+		sum = 0;
+		int i;
+		for(i=1; i<11; i++) {
+			sum = sum + i;
+		}
+		System.out.println(sum);
+		System.out.println("합 : " + sum);
+	}
+
+}

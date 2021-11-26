@@ -1,0 +1,13 @@
+package n3_echo_chat.server;
+
+import java.net.ServerSocket;
+
+public class ServerExample {
+	
+	ServerSocket serverSocket;
+	
+	public static void main(String[] args) {
+
+	}
+
+}

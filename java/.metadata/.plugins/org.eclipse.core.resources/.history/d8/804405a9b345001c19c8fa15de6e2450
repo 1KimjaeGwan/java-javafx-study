@@ -1,0 +1,9 @@
+package n1_inetaddress_url;
+
+public class InetAddressExample {
+
+	public static void main(String[] args) {
+
+	}
+
+}

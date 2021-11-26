@@ -1,0 +1,28 @@
+package exam;
+
+import java.util.Scanner;
+
+public class asdfadsf {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String s = "홍길동";
+	
+		System.out.println("사원명을 입력하세요?");
+		String id = sc.next();
+		System.out.println("시급을 입력하세요?");
+		int a = sc.nextInt();
+		System.out.println("근무시간을 입력하세요?");
+		int b = sc.nextInt();
+		
+		int result = a*b;
+		int c = (a*b)*97/100;
+		System.out.println("급여명세서");
+		System.out.println("사원명:" + s);
+		System.out.println("급여금액: " + result);
+		System.out.println("공제합계: " + c);
+		System.out.println("실지급액: " + (result-c));
+
+	}
+
+}

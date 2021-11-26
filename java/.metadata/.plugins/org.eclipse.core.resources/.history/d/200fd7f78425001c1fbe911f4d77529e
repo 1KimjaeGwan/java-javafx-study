@@ -1,0 +1,13 @@
+package operator;
+
+public class OperatorShiftTest {
+
+	public static void main(String[] args) {
+		// << , >> , >>> bit값을 제어 하는 연산자
+		byte num = 5;
+		// 0B(이진수)
+		// 0B00000101 == 5
+		System.out.println("num << 2 : "+(num << 2));
+	}
+
+}

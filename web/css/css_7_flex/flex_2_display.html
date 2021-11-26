@@ -1,0 +1,58 @@
+<!-- flex_2_display.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .wrap{
+        background-color: #eeeeee;
+        margin: 0 auto;
+        width: 500px;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    .item{
+        width: 50px;
+        height: 50px;
+    }
+
+    .item01{
+        background-color: rgb(33,185,185);
+        flex-grow: 1;
+        order: 1;
+    }
+
+    .item02{
+        background-color: rgb(177,214,45);
+        flex-grow: 2;
+        align-self: flex-start;
+    }
+
+    .item03{
+        background-color: rgb(212,78,194);
+        flex-grow: 3;
+        order: -1;
+        
+    }
+</style>
+</head>
+<body>
+    <!-- div.wrap>div.item.item$${$$}*3 -->
+    <div class="wrap">
+        <div class="item item01">01</div>
+        <div class="item item02">02</div>
+        <div class="item item03">03</div>
+    </div>
+
+    <!-- http://flexboxfroggy.com -->
+</body>
+</html>

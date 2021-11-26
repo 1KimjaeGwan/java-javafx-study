@@ -1,0 +1,18 @@
+package n3_echo_chat.client;
+
+import java.net.Socket;
+
+public class ClientExample {
+
+	Socket socket;
+	
+	// Client 시작 - Server와 연결 및 Socket 생성
+	public void startClient() {}
+	// Client 종료 - 자원해제
+	public void stopClient() {}
+	
+	public static void main(String[] args) {
+		new ClientExample();
+	}
+
+}

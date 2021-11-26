@@ -1,0 +1,16 @@
+package exam;
+
+public class Tkekfl {
+
+	public static void main(String[] args) {
+		int a = 5;
+		int b = 10;
+		int c = 7;
+		
+		int result = ((a+b)*c)/2;
+		
+		double d = ((a+b)*c)/2.0;
+		System.out.println(d);
+	}
+
+}

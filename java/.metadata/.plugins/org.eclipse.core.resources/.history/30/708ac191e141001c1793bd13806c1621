@@ -1,0 +1,37 @@
+package account.pstmt;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import account.Account;
+import dao.AccountDAO;
+
+public class AccountPSTMTDAOImpl implements AccountDAO {
+
+	private Connection conn;
+	private PreparedStatement pstmt;
+	private ResultSet rs;
+	
+	
+	@Override
+	public void insert(Account account) {
+		String sql = "INSERT INTO tbl_account VALUES(?,?,?,?)";
+	}
+
+	@Override
+	public int update(Account account) {
+		return 0;
+	}
+
+	@Override
+	public Account selectAccount(String ano) {
+		return null;
+	}
+
+	@Override
+	public Account selectAccount(String ano, String password) {
+		return null;
+	}
+
+}

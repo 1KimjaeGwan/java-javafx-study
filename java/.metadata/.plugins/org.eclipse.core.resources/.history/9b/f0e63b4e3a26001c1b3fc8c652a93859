@@ -1,0 +1,10 @@
+package exam;
+
+public class exam {
+
+	public static void main(String[] args) {
+		String s = "Hello JAVA";
+		System.out.println(Hello JAVA);
+	}
+
+}

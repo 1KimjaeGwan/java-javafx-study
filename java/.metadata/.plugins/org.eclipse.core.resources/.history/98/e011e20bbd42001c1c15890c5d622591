@@ -1,0 +1,18 @@
+package test1_class;
+
+public class ClassExample {
+
+	public static void main(String[] args) {
+		
+		
+		
+		Person person = new Person("a");
+		System.out.println(person);
+		
+		Class<? extends Person> pClass2 = person.getClass();
+		System.out.println(pClass2.getName());
+		
+		Class<?> pCclass3 = Class.forName("test1_class.Person");
+	}
+
+}

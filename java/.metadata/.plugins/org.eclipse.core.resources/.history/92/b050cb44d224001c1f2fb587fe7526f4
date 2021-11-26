@@ -1,0 +1,32 @@
+
+public class VariableTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*
+		 * *comments 주석 다중 행 주석
+		 */
+		// byte type의 bNum 변수 선언
+		byte bNum;
+		// System.out.println(넘겨받은값)
+		// 넘겨받은 값을 console 에 출력
+		
+		// bNum 변수의 값을 127로 초기화
+		bNum = 127;
+		System.out.println(bNum);
+		// byte == 1byte의 저장공간 -128 ~ 0 ~ 127
+		// bNum = 128; 값의 범위가 벗어남. 문법 오류
+		
+		// byte bNum = 127; // 변수 이름은 중복 불가
+		
+		//byte type의 변수 b1,b2,b3를 한번에 선언
+		byte b1,b2,b3;
+		b1 = 10;
+		b2 = -10;
+		b3 = (byte)-b2;
+		
+		System.out.println(b1+b2+b3);
+		
+	}
+
+}

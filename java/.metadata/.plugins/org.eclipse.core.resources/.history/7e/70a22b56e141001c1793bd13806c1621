@@ -1,0 +1,27 @@
+package account.pstmt;
+
+import account.Account;
+import dao.AccountDAO;
+
+public class AccountPSTMTDAOImpl implements AccountDAO {
+
+	@Override
+	public void insert(Account account) {
+	}
+
+	@Override
+	public int update(Account account) {
+		return 0;
+	}
+
+	@Override
+	public Account selectAccount(String ano) {
+		return null;
+	}
+
+	@Override
+	public Account selectAccount(String ano, String password) {
+		return null;
+	}
+
+}

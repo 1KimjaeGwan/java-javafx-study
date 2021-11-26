@@ -1,0 +1,65 @@
+.wrap{
+  float:left;
+  margin:10px;
+}
+
+h1 {
+    color:white;
+    text-align:center;
+    line-height:200px;
+    padding:0;
+    margin:0;
+}
+
+.box1 {
+	width: 500px;
+	height: 200px;
+	background-color: gray;
+}
+
+.position_static_parent {
+    position:static;
+    width: 500px;
+    background-color: yellow;
+    /* border:1px solid black; */
+    padding:5px;
+}
+
+.position_relative_parent {
+    position:relative;
+    width: 500px;
+    background-color: yellow;
+    /* border:1px solid black; */
+    padding:5px;
+}
+
+.position_absolute_parent {
+    position:absolute;
+    width: 500px;
+    background-color: yellow;
+    /* border:1px solid black; */
+    padding:5px;
+}
+
+.position_fixed_child {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+		top:20px;
+		right:20px;
+}
+
+.marginTop{
+  margin-top: 150px;
+}
+.marginBottom{
+  margin-bottom:100px;
+}
+
+.dummy{
+	clear:left;
+	width:100%;
+	height:2000px;
+	background-color:pink;
+}

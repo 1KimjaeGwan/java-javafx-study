@@ -1,0 +1,9 @@
+package n3_echo_chat.client;
+
+public class ClientExample {
+
+	public static void main(String[] args) {
+
+	}
+
+}

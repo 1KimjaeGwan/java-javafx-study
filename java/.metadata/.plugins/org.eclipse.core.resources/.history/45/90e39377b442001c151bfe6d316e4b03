@@ -1,0 +1,19 @@
+package member;
+
+import java.util.Date;
+
+public class BackUpMember {
+	
+	// 회원 탈퇴 일 정보
+	private Date deleteDate;
+	
+
+	public Date getDeleteDate() {
+		return deleteDate;
+	}
+
+	public void setDeleteDate(Date deleteDate) {
+		this.deleteDate = deleteDate;
+	}
+	
+}

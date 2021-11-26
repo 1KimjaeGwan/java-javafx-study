@@ -1,0 +1,53 @@
+package n3_echo_chat.client;
+
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class ClientExample {
+
+	Scanner sc = new Scanner(System.in);
+	Socket socket;
+	
+	ClientExample(){
+		startClient();
+	}
+	
+	// Server에 message 전달
+	public void send(String message) {
+		
+	}
+	
+	// Client 시작 - Server와 연결 및 Socket 생성
+	public void startClient() {
+		try {
+			socket = new Socket();
+			socket.connect(
+					new InetSocketAddress("192.168.1.97",5002)
+				);
+			System.out.println("연결 완료 : "+socket.getRemoteSocketAddress());
+		} catch (IOException e) {
+			System.out.println("서버와 통신 안됨 : "+e.getMessage());
+			stopClient();
+			return;
+		}
+	}
+	
+	// Client 종료 - 자원해제
+	public void stopClient() {
+		System.out.println("연결 종료");
+		// socket이 생성되어져 있고 서버와 연결이 되어있는 상태
+		// 일때 소켓 닫음.
+		if(socket != null && !socket.isClosed()) {
+			try {
+				socket.close();
+			} catch (IOException e) {}
+		}
+	}
+	
+	public static void main(String[] args) {
+		new ClientExample();
+	}
+
+}

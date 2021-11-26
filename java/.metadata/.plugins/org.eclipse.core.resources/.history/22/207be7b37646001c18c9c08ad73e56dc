@@ -1,0 +1,20 @@
+package client;
+
+public class ChatClient {
+
+	public static final String IP = "192.168.1.97";
+	public static final int PORT = 5001;
+	
+	// 서버와 연결
+	public void connect() throws Exception{
+		
+	}
+	
+	// server에서 메세지 수신
+	public void receive() {}
+	
+	public static void main(String[] args) {
+		new ChatClient();
+	}
+
+}

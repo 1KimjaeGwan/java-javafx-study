@@ -1,0 +1,12 @@
+package client;
+
+public class ChatClient {
+
+	public static final String IP = "192.168.1.97";
+	public static final int PORT = 5001;
+	
+	public static void main(String[] args) {
+		new ChatClient();
+	}
+
+}

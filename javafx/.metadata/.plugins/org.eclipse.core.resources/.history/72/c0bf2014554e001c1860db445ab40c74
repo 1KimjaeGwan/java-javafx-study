@@ -1,0 +1,5 @@
+/* UI Implementation */
+
+cBox{
+	-fx-text-color:#792c35;
+}

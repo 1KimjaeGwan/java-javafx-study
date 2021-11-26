@@ -1,0 +1,14 @@
+package t01_create_thread;
+
+public class BeepThreadExample {
+
+	public static void main(String[] args) {
+		System.out.println("Main 시작");
+		Thread t = new BeepThread();
+		
+		
+		
+		System.out.println("Main 종료");
+	}
+
+}

@@ -1,0 +1,19 @@
+package n4_udp;
+
+import java.net.DatagramSocket;
+import java.net.SocketException;
+
+public class UDPReceiveExample {
+	
+	public static void main(String[] args) {
+		try {
+			// 전달할 데이터 정보와 전달될 위치 정보를 가지고
+			// data를 전송 하는 역할
+			DatagramSocket datagramSocket = new DatagramSocket();
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

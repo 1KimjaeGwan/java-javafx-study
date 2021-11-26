@@ -1,0 +1,14 @@
+package conditional_statement;
+
+import java.util.Scanner;
+
+public class SwitchTest {
+
+	public static void main(String[] args) {
+		
+		java.util.Scanner sc = new Scanner(System.in);
+		java.util.Scanner scanner = new Scanner(System.in);
+
+	}
+
+}

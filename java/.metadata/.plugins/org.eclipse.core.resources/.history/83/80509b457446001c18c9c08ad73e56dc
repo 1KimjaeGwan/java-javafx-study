@@ -1,0 +1,16 @@
+package server;
+
+import java.net.ServerSocket;
+
+public class ChatServer {
+	
+	public static final String IP = "192.168.1.97";
+	public static final int PORT = 5001;
+	
+	ServerSocket serverSocket; // client 연결 수락 및 정보 확인
+
+	public static void main(String[] args) {
+		new ChatServer();
+	}
+
+}

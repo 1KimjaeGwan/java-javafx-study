@@ -1,0 +1,19 @@
+package w2_task;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.fxml.Initializable;
+
+public class CallBackController implements Initializable {
+
+	@FXML private ProgressBar progressBar;
+	@FXML private Label lblPath, lblWork;
+	@FXML private Button btnChooser, btnStart, btnStop;
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+
+	}
+
+}

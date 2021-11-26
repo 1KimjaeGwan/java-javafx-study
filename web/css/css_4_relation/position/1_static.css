@@ -1,0 +1,59 @@
+.wrap{
+  float:left;
+  margin:10px;
+}
+
+h1 {
+    color:white;
+    text-align:center;
+    line-height:200px;
+    padding:0;
+    margin:0;
+}
+
+.box1 {
+	width: 500px;
+	height: 200px;
+	background-color: gray;
+}
+
+.position_static_parent {
+    position:static;
+    width: 500px;
+    background-color: yellow;
+    /* border:1px solid black;
+    padding:5px;
+    */
+}
+
+.position_relative_parent {
+    position:relative;
+    width: 500px;
+    background-color: yellow;
+    /* border:1px solid black;
+    padding:5px;
+    */
+}
+
+.position_absolute_parent {
+    position:absolute;
+    width: 500px;
+    background-color: yellow;
+    /* border:1px solid black; 
+    padding:5px;
+    */
+}
+
+.position_static_child {
+    position: static;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+
+.marginTop{
+  margin-top: 150px;
+}
+.marginBottom{
+  margin-bottom:100px;
+}

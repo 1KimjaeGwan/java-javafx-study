@@ -1,0 +1,21 @@
+package exam;
+
+import java.util.Scanner;
+
+public class BankApp {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		// while문 반복 flag true = run , false = stop
+		boolean isRun = true;
+		// 사용자의 예금을 저장할 변수
+		int money = 0;
+		while(isRun) {
+			System.out.println("==========================");
+			System.out.println("1.예금|2.출금|3.잔액확인|4.종료");
+			System.out.println("==========================");
+			System.out.println("번호를 입력해 주세요(1~4) > ");
+		}
+		
+	} // Main 종료
+} // class 종료

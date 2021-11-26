@@ -1,0 +1,53 @@
+<!-- web/ex/210917_1.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<style>
+    .box{
+        width: 800px;
+        margin: 0 auto;
+        background-color: gray;
+    }
+
+    .box ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        border: 1px solid black;
+        overflow: hidden;
+    }
+
+    .box ul li{
+        float: left;
+        color: white;
+        width: 198.75px;
+        text-align: center;
+        padding: 20px 0;
+        border-right: 1px solid black;
+    }
+
+    .box ul li:last-child{
+        border-right: none;
+    }
+
+    .box ul li:hover{
+        color: gray;
+        background-color: white;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <!-- div.box>ul>(li{menu-$)*4) -->
+        <div class="box">
+            <ul>
+                <li>menu-1</li>
+                <li>menu-2</li>
+                <li>menu-3</li>
+                <li>menu-4</li>
+            </ul>
+        </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!-- css_8.ex.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<style>
+    :root{
+        --text-content-color:rgb(77, 231, 224);
+        --text-content-size:20px;
+        --text-heading-size:30px;
+    }
+
+    .box{
+        color: var(--text-content-color);
+        font-size: var(--text-heading-size);
+    }
+
+    .child_box{
+        font-size: var(--text-content-size);
+    }
+
+    /* ul>li.new>a 태그 이전에 가상 요소 추가 */
+    /* 입력태그(form,input...) 태그, 이미지 태그는 가상 선택자 적용 불가 */
+    ul>li.new>a:before{
+        background-color: greenyellow;  
+        color: white;
+        margin-right: 10px;
+        content: "NEW";
+    }
+
+    ul>li.new>a:after{
+    background-color:skyblue;
+    color:white;
+    margin-right:10px;
+    content:"AFTER"
+}
+
+</style>
+</head>
+<body>
+    <h1>::before  ::after</h1>
+    <!-- div>ul>(li>a[href=#])*3 -->
+    <div>
+        <ul>
+            <li class="new"><a href="#">게시물 - 1</a></li>
+            <li><a href="#">게시물 - 2</a></li>
+            <li><a href="#">게시물 - 3</a></li>
+        </ul>
+    </div>
+
+    <div class="box">
+        BoxContent
+        <div class="child_box">
+            Child Content
+        </div>
+    </div>
+</body>
+</html>

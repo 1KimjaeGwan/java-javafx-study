@@ -1,0 +1,9 @@
+package t02_priority;
+
+public class PriorityExample {
+
+	public static void main(String[] args) {
+
+	}
+
+}

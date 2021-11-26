@@ -1,0 +1,20 @@
+package server;
+
+import java.net.Socket;
+
+public class ServerTask implements Runnable {
+	// 현재 task에 등록된 client 정보
+	Socket client;
+	
+	// server로 부터 accept된 Client의 Socket정보를
+	// 생성자의 매개변수로 전달 받음.
+	public ServerTask(Socket client) {
+		this.client = client;
+	}
+
+	// receive
+	@Override
+	public void run() {
+	}
+
+}

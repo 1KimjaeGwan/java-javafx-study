@@ -1,0 +1,8 @@
+package n4_udp;
+
+public class UDPReceiveExample {
+	
+	public static void main(String[] args) {
+		
+	}
+}

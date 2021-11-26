@@ -1,0 +1,42 @@
+<!-- 05_guess.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<script>
+    let isRun = true;   // while flag
+    let guess = 46;     // 임의의 값
+    // Math.random();
+    // 시간의 흐름에 따라 0~ 0.99999999... 의 난수를 발생
+    // parseInt(값) 넘겨받은 값을 정수로 변환
+    guess = parseInt(Math.random()*100) + 1;
+    console.log(guess);
+
+    let count = 0;      // 추측 횟수
+    let result = "";    // 결과 메세지
+    //isRun = false;
+
+    while(isRun){
+        count++;
+        let input = prompt("1~100까지의 정수를 입력해주세요.");
+        if(input == "" || input == null || isNaN(input)){
+            alert("1~100까지의 정수를 입력해주세요!");
+            continue;
+        }
+        
+        if(input == guess){
+            result = "성공입니다.";
+            isRun = false;
+        }else if (input < guess){
+            result = "낮습니다.";
+        }else{
+            result = "높습니다.";
+        }
+        alert(`${result} - 추측횟수 : ${count}`);
+    }
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,5 @@
+package t06_daemon;
+
+public class ParentThread {
+
+}

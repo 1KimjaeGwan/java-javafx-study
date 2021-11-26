@@ -1,0 +1,44 @@
+<!-- 06_dom_elem_style_1.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<script>
+    function changeStyle(){
+        console.log("click event 확인!");
+        let p1 = document.querySelector("#p1");
+        p1.style.color = "pink";
+        p1.style.fontStyle = "italic";
+        p1.style.backgroundImage = "url(./img/pome.png)";
+        p1.style.backgroundRepeat = "no-repeat"
+        p1.style.backgroundSize = "150px";
+        p1.style.width = "500px";
+        p1.style.height = "200px";
+        /*
+            #p1{
+                color : pink;
+                font-style : italic;
+                background-image : url(./img/pome.pog);
+                background-repeat : no-repeat;
+            }
+        */
+    }
+</script>
+</head>
+<body>
+    <p id="p1">
+        This is a paragraph.
+    </p>
+    <button type="button" onclick="changeStyle();">눌러보세요!</button>
+    <h1 id="target">View Attribute</h1>
+    <button onclick='document.querySelector("#target").style
+    .visibility="hidden";'>요소숨김</button>
+    <button onclick='document.querySelector("#target").style
+    .visibility="visible";'>요소표시</button>
+    <button onclick='document.querySelector("#target").style
+    .display="block";'>요소사용</button>
+    <button onclick='document.querySelector("#target").style
+    .display="none";'>사용안함</button>
+</body>
+</html>

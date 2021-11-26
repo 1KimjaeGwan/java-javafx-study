@@ -1,0 +1,16 @@
+package exam;
+
+import java.util.Scanner;
+
+public class Abc {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String s = "홍길동";
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		
+
+	}
+
+}

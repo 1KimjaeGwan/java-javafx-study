@@ -1,0 +1,61 @@
+package account.stmt;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import account.Account;
+import dao.AccountDAO;
+
+// Account
+// Statement
+// DAtabase Access Object
+public class AccountSTMTDAOImpl implements AccountDAO{
+
+	// DBMS 연결 객체
+	private Connection conn;
+	// 연결정보를 가지고 질의를 실행하는 객체
+	private Statement stmt;
+	// 검색질의의 결과를 전달 받는 객체
+	private ResultSet rs;
+	
+	public AccountSTMTDAOImpl() {
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String url = "jdbc:mysql://localhost:3306/smart";
+			String user = "smart";
+			String password = "12345";
+			conn = DriverManager.getConnection(url, user, password);
+			System.out.println("DB 연결 성공");
+		} catch (ClassNotFoundException e) {
+			System.out.println("Driver class를 찾을 수 없음");
+		} catch (SQLException e) {
+			System.out.println("연결 정보 오류 : "+ e.getMessage());
+		}
+		
+	}
+	
+	
+	@Override
+	public void insert(Account account) {
+	}
+
+	@Override
+	public int update(Account account) {
+		return 0;
+	}
+
+	@Override
+	public Account selectAccount(String ano) {
+		return null;
+	}
+
+	@Override
+	public Account selectAccount(String ano, String password) {
+		return null;
+	}
+
+}

@@ -1,0 +1,102 @@
+package test1_class;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+
+public class ClassExample {
+
+	public static void main(String[] args) throws ClassNotFoundException {
+		// Object가 가지고 있는 정적 멤버 class 변수
+		// 객체 설계 정보를 가지고 옴		
+		Class<? extends Person> pClass1 = Person.class;
+		// class의 이름 정보(package를 포함하는 class이름이 전체이름)
+		System.out.println(pClass1.getName());
+		
+		Person person = new Person("a");
+		System.out.println(person);
+		
+		Class<? extends Person> pClass2 = person.getClass();
+		System.out.println(pClass2.getName());
+		
+		// class 파일이 위치한 정보를 가지고 
+		// class 설계정보를 반환
+		Class<?> pClass3 = Class.forName("test1_class.Person");
+		System.out.println(pClass3.getName());
+		System.out.println(pClass3.getSimpleName());
+		System.out.println(pClass3.getPackage().getName());
+		
+		// class에 정의된 Field(전역변수) 정보 제공
+		// java.lang.reflect
+		Field[] fields = pClass3.getDeclaredFields();
+		System.out.println("Fields ==========================");
+		for(Field f : fields) {
+			System.out.print(Modifier.toString(f.getModifiers())+"\t");
+			System.out.print(f.getType().getSimpleName()+"\t");
+			System.out.println(f.getName());
+		}
+		System.out.println();
+		
+		// class에 정의된 생성자 정보 제공
+		System.out.println("Constructors ============================");
+		// import java.lang.reflect.Constructor
+		Constructor<?>[] cons = pClass3.getDeclaredConstructors();
+		for(Constructor<?> c: cons) {
+			System.out.print(c.getName()+"(");
+			Class<?>[] param = c.getParameterTypes();
+			for(int i=0; i<param.length; i++) {
+				System.out.print(param[i].getName()+" ");
+			}
+			System.out.println(")");
+		}
+		
+		System.out.println();
+		System.out.println("Methods ============================");
+		// java.lang.reflect.Method
+		Method[] methods = pClass3.getDeclaredMethods();
+		System.out.println(methods[0]);
+		for(Method m : methods) {
+			System.out.println(m);
+			System.out.print(Modifier.toString(+m.getModifiers()));
+			System.out.print("\t"+m.getReturnType()+"\t"+m.getName());
+			System.out.print("(");
+			Class<?>[] param = m.getParameterTypes();
+			for(int i =0; i<param.length; i++) {
+				System.out.print(param[i].getName()+" ");
+			}
+			System.out.println(")");
+		}
+		
+		System.out.println("instance 생성");
+		
+		try {
+			Person p 
+				= (Person)Class.forName("test class.Person").newInstance();
+		} catch (InstantiationException e) {
+			// 객체 설계 정보는 있으나 객체 생성이 불가능 할때 발생하는 오류
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			//
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// 해당 되는 패키지에 해당되는 class이름을 가진 설계도를 찾지 못함.
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		
+		
+	}
+}
+
+
+
+
+
+
+
+

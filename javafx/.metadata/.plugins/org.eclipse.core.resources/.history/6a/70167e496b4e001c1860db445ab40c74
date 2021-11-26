@@ -1,0 +1,163 @@
+package c2_draw_line;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Button;
+import javafx.scene.control.ColorPicker;
+import javafx.scene.control.Slider;
+import javafx.scene.control.TextArea;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
+
+public class CanvasController implements Initializable {
+
+	@FXML private Canvas canvas;
+	@FXML private TextArea txtArea;
+	@FXML private ColorPicker pick;
+	@FXML private Slider slider;
+	@FXML private Button btnClear;
+	
+	private JButton blackBtn, redBtn, greenBtn, blueBtn, yellowBtn, eraserBtn, clearBtn, exitBtn, startBtn;
+	
+	ImageIcon blackBtnIcon = new ImageIcon("img.blackBtnIcon.png");
+	ImageIcon redBtnIcon = new ImageIcon("img.redBtnIcon.png");
+	ImageIcon greenBtnIcon = new ImageIcon("img.greenBtnIcon.png");
+	ImageIcon blueBtnIcon = new ImageIcon("img.blueBtnIcon.png");
+	ImageIcon yellowBtnIcon = new ImageIcon("img.yellowBtnIcon.png");
+	ImageIcon eraserBtnIcon = new ImageIcon("img.eraserBtnIcon.png");
+	ImageIcon clearBtnIcon = new ImageIcon("img.clearBtnIcon.png");
+	ImageIcon exitBtnIcon = new ImageIcon("img.exitBtnIcon.png");
+	ImageIcon startBtnIcon = new ImageIcon("img.startBtnIcon.jpg");
+	
+	
+	frame = new JFrame("게임방");
+	frame.setBounds(500,100,1024,768);
+	frame.getContentPane().setLayout(null);
+	frame.setLocationRelativeTo(exFrame);
+	
+			
+	
+	startBtn = new JButton(startBtnIcon);
+	startBtn.setBounds(846, 367, 110, 36);
+	frame.getContentPane().add(startBtn);
+	
+	timerLabel = new JLabel("");
+	timerLabel.setBounds(222, 596, 133, 36);
+	frame.getContentPane().add(timerLabel);
+	
+	blackBtn = new JButton(blackBtnIcon);
+	blackBtn.setBounds(272, 546, 42, 70);
+	frame.getContentPane().add(blackBtn);
+	
+	redBtn = new JButton(redBtnIcon);
+	redBtn.setBounds(326, 546, 42, 70);
+	frame.getContentPane().add(redBtn);
+	
+	greenBtn = new JButton(greenBtnIcon);
+	greenBtn.setBounds(380, 546, 42, 70);
+	frame.getContentPane().add(greenBtn);
+	
+	blueBtn = new JButton(blueBtnIcon);
+	blueBtn.setBounds(434, 546, 42, 70);
+	frame.getContentPane().add(blueBtn);
+	
+	yellowBtn = new JButton(yellowBtnIcon);
+	yellowBtn.setBounds(488, 546, 42, 70);
+	frame.getContentPane().add(yellowBtn);
+	
+	eraserBtn = new JButton(eraserBtnIcon);
+	eraserBtn.setBounds(584, 578, 42, 38);
+	frame.getContentPane().add(eraserBtn);
+	
+	clearBtn = new JButton(clearBtnIcon);
+	clearBtn.setBounds(638, 566, 112, 50);
+	frame.getContentPane().add(clearBtn);
+	
+	exitBtn = new JButton(exitBtnIcon);
+	exitBtn.setBounds(894, 10, 106, 43);
+	frame.getContentPane().add(exitBtn);
+	
+	slider = new JSlider();
+	slider.setBackground(new Color(0, 153, 204));
+	slider.setBounds(570, 527, 180, 36);
+	frame.getContentPane().add(slider);
+	
+	paintCanvas = new PaintCanvas(Game.this);
+	canvas = paintCanvas.getCanvas(); 
+	canvas.setBounds(250, 157, 516, 345);
+	frame.getContentPane().add(canvas);
+	
+	GraphicsContext gc;
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		gc = canvas.getGraphicsContext2D();
+		gc.setStroke(Color.BLACK);	// 선 색
+		gc.setLineWidth(1);			// 선 굵기
+		
+		slider.setMin(1);			// 슬라이더 최소값 지정
+		slider.setMax(100);			// 슬라이더 최대값 지정
+		txtArea.setEditable(false);	// == read only
+		
+		// canvas 위에서 마우스가 움직일 때
+		canvas.setOnMouseMoved(new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent event) {
+				double x = event.getSceneX();
+				double y = event.getSceneY();
+				txtArea.appendText("x : " + x + ", y : "+ y +"\n");
+			}
+		});
+		
+		// 마우스가 눌러졌을때
+		canvas.setOnMousePressed(event->{
+			gc.beginPath();		// 선그리기 시작
+			gc.lineTo(event.getX(), event.getY());
+			
+		});
+		
+		// 마우스가 드래그 되는 동안
+		canvas.setOnMouseDragged(event->{
+			double x = event.getX();
+			double y = event.getY();
+			txtArea.appendText(x+":"+y+"\n");
+			gc.lineTo(x, y);
+			gc.stroke();
+		});
+		
+		btnClear.setOnAction(event->{
+			gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
+			pick.setValue(Color.WHITE);
+			slider.setValue(1);
+			gc.setLineWidth(1);
+			gc.setStroke(Color.BLACK);
+		});
+		
+		// colorPicker의 값이 변경되면 선 색상 변경
+		pick.valueProperty().addListener(new ChangeListener<Color>() {
+			@Override
+			public void changed(ObservableValue<? extends Color> observable, Color oldValue, Color newValue) {
+				gc.setStroke(newValue);
+			}
+		});
+		
+		// slider의 값이 변경되면 선 굵기 변경
+		slider.valueProperty().addListener((ob,oldValue,newValue)->{
+			int value = newValue.intValue();
+			double result = value/10;
+			gc.setLineWidth(result);
+		});
+		
+	}
+}

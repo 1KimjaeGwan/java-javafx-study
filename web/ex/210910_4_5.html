@@ -1,0 +1,99 @@
+<!-- 210910_4_5.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title>210910_4_5.html</title>
+</head>
+<body>
+    <!-- table>(tr>td*2)*5 -->
+    <table>
+        <tr>
+            <td>이메일</td>
+            <td>
+                <input type="text" value="neo@naver.com"/>
+            </td>
+        </tr>
+        <tr>
+            <td>이름</td>
+            <td>
+                <input type="text" value="neo">
+            </td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td>
+                <input type="password" value="123456">
+            </td>
+        </tr>
+        <tr>
+            <td>비밀번호 확인</td>
+            <td>
+                <input type="password" value="123456">
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <input type="submit" value="제출"/>
+            </td>
+        </tr>
+    </table>
+    <hr/>
+    <!-- ex - 5 -->
+    <!-- table>(tr>td*4)*4 -->
+    <table>
+        <tr>
+            <td>이름</td>
+            <td colspan="3">
+                <input type="name" value="neo"/>
+            </td>
+         <!--
+                <td></td>
+                <td></td>
+            -->
+        </tr>
+        <tr>
+            <td>성별</td>
+            <td>
+                <input type="radio" name="gender" id="male"/>
+                <label for=",male">남성</label>
+            </td>
+            <td>
+                <label>
+                    <input type="radio" name="gender"checked/>여성
+                </label>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>취미</td>
+            <td>
+                <label>
+                    <input type="checkbox" name="habby"/>
+                    운동
+                </label>
+            </td>
+            <td>
+                <label>
+                    <input type="checkbox" name="habby"/>
+                    음악
+                </label>
+            </td>
+            <td>
+                <label>
+                    <input type="checkbox" name="habby"/>
+                    개발
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" />
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

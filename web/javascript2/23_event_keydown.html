@@ -1,0 +1,44 @@
+<!-- 23_event_keydown.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<script>
+window.onload = function(){
+    document.getElementById("id").onkeydown=function(event){
+        //console.log("id key 눌러짐.....");
+        //console.log(`${event.key} : ${event.keyCode}`);
+        //if(event.keyCode == 13){
+        if(event.key == "Enter"){
+            console.log("Enter key down");
+            document.getElementById("pw").focus();
+        }
+    }
+
+    document.getElementById("pw").addEventListener("keydown", function(event){
+        if(event.keyCode == 13){
+            console.log('pw key down Enter');
+        // form tag에 submit event를 발생
+        // input type='submit' 버튼을 클릭한것과 동일한 이벤트
+            document.myForm.submit();
+        }
+    });
+
+    document.getElementById("btn").onclick = function(){
+        document.myForm.submit();
+    };
+}
+</script>
+</head>
+<body>
+    <!-- 
+        form>(input:text[name='id' id='id']+input:password[name='pw' id='pw']+input:button[id='btn' value='전송'])
+     -->
+    <form action="22_event_focus_blur.html">
+        <input type="text" name="id" id="id"/> 
+        <input type="password" name="pw" id="pw"/>
+        <input type="button" value="전송" id="btn"/>
+    </form>
+</body>
+</html>

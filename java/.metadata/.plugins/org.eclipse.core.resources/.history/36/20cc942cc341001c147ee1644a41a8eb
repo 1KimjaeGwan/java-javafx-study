@@ -1,0 +1,7 @@
+package account.stmt;
+// Account
+// Statement
+// DAtabase Access Object
+public class AccountSTMTDAOImpl implements AccountDAO{
+
+}

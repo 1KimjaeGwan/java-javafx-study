@@ -1,0 +1,13 @@
+package account.pstmt;
+
+import java.sql.Connection;
+
+import util.DBHelper;
+
+public class DBHelperTest {
+
+	public static void main(String[] args) {
+		Connection conn = DBHelper.getConnection();
+	}
+
+}

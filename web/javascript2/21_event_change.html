@@ -1,0 +1,37 @@
+<!-- 21_event_change.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<script>
+   function changeImage(){
+        let sel = document.getElementById("sel");
+        let img = document.getElementById("myImg");
+        // select 태그 option들 중 selected 속성이 추가된 option의 인덱스 번호를 반환
+        let index = sel.selectedIndex;
+        // sel.options[index]
+        // select option들을 배열로 제공 - 인덱스 번호로 선택
+        img.src = sel.options[index].value;
+
+        img.onload = function(){
+            let mySpan = document.getElementById("mySpan");
+            mySpan.innerText = img.width+"x"+img.height;
+        }
+    }
+</script>
+</head>
+<body>
+    <form>
+        <select id="sel" onchange="changeImage();">
+            <option value="img/apple.png" selected>사과</option>
+            <option value="img/banana.png" >바나나</option>
+            <option value="img/mango.png">망고</option>
+        </select>
+        <span id="mySpan">이미지 크기</span>
+    </form>
+    <p>
+        <img id="myImg" src="img/apple.png" />
+    </p>
+</body>
+</html>

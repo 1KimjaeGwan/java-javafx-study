@@ -1,0 +1,14 @@
+package t03_state;
+
+public class TargetThread extends Thread {
+	public void run() {
+		for(long i=0; i<100000000000L; i++);
+		
+		try {
+			Thread.sleep(1500);
+		} catch (InterruptedException e) {}
+		
+		for(long i=0; i<100000000000L; i++);
+		
+	}
+}

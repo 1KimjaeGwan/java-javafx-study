@@ -1,0 +1,61 @@
+<!-- html_table.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title>table</title>
+</head>
+<body>
+    <table border="3" cellspacing="0">
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>전화번호</th>
+            <th>이메일</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>김재관</td>
+            <td>01098117381</td>
+            <td>zyear@naver.com</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>이이</td>
+            <td>01023456789</td>
+            <td>22@hanmail.net</td>
+        </tr>
+    </table>
+    <hr/>
+    <table border="1">
+        <tfoot>
+            <tr>
+                <th colspan="3">[1][2][3][4][5][다음]</th>
+            </tr>
+        </tfoot>       
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>언제 배송 되나요..</td>
+                <td>김재관</td>
+                <td rowspan="3">비고</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>오늘 배송 되나요..</td>
+                <td>홍길동</td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th colspan="3">자유게시판</th>
+            </tr>
+            <tr>
+                <th>글번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+            </tr>
+        </thead>
+    </table>
+</body>
+</html>

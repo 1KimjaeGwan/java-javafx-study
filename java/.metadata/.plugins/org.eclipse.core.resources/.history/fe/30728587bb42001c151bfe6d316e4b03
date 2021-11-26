@@ -1,0 +1,11 @@
+package test1_class;
+
+public class Person {
+	
+	public static String address;
+	private String name;
+	private int age;
+	public Person() {}
+	
+	
+}

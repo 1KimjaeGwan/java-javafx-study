@@ -1,0 +1,42 @@
+package w2_task;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.concurrent.Task;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
+
+public class TaskController implements Initializable {
+	
+	@FXML private ProgressBar progressBar;
+	@FXML private Label lblWork;
+	@FXML private Button btnStart, btnStop, btnNext;
+	
+	// generic으로 task 작업이 끝나고 반환 받는 값의 타입을 지정
+	// Void == void 반환하는 값이 없다는 걸 표현하는 클래스
+	Task<Void> task;
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		
+		btnStart.setOnAction(event->{
+			
+		});
+		
+		btnStop.setOnAction(event->{
+			
+		});
+		
+
+		btnNext.setOnAction(event->{
+			
+		});
+		
+		
+	}
+
+}

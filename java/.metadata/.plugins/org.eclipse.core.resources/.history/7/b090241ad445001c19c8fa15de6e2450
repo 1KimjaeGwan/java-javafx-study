@@ -1,0 +1,15 @@
+package n3_echo_chat.server;
+
+import java.net.Socket;
+
+// socket으로 연결된 client의 정보를 저장하고
+// 기능을 수행할 클래스
+public class Client {
+	// 연결된 client socket의 정보를 저장할 socket
+	Socket socket;
+
+	public Client(Socket socket) {
+		this.socket = socket;
+	}
+	
+}

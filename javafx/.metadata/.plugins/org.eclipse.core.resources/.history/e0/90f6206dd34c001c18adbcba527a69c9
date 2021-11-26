@@ -1,0 +1,27 @@
+package c2_draw_line;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.control.Button;
+import javafx.scene.control.ColorPicker;
+import javafx.scene.control.Slider;
+import javafx.scene.control.TextArea;
+
+public class CanvasController implements Initializable {
+
+	@FXML private Canvas canvas;
+	@FXML private TextArea txtArea;
+	@FXML private ColorPicker pick;
+	@FXML private Slider slider;
+	@FXML private Button btnClear;
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+
+	}
+
+}

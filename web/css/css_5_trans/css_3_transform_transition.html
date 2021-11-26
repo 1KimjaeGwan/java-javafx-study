@@ -1,0 +1,30 @@
+<!-- css_3_transform_transition.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<style>
+    .box{
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        transition: width 2s , height 2s, transform 3s;
+    }
+
+    input:checked + .box{
+        width: 200px;
+        height: 200px;
+        transform:skew(760deg);
+    }
+</style>
+</head>
+<body>
+    <input type="checkbox"/> 선택
+    <div class="box">hello</div>
+    <br/>
+    <!-- div.box{hello}*2 -->
+    
+    <div class="box">hello</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+package n3_echo_chat.server;
+
+import java.net.ServerSocket;
+
+public class ServerExample {
+	
+	ServerSocket serverSocket;
+	
+	// server를 시작하고
+	// client 열결을 담당할 메소드
+	public void startServer() {
+		
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}

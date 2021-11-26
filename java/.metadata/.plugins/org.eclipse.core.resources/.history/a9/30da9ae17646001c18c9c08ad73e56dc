@@ -1,0 +1,25 @@
+package client;
+
+public class ChatClient {
+
+	public static final String IP = "192.168.1.97";
+	public static final int PORT = 5001;
+	
+	// 서버로 출력하는 스트림
+	PrintWriter pw;
+	// 서버에서 입력받는 스트림
+	BufferedReader br;
+	// Console에서 입력받는 스트림
+	BufferedReader read;
+	
+	// 서버와 연결
+	public void connect() throws Exception {}
+	
+	// server에서 메세지 수신
+	public void receive() {}
+	
+	public static void main(String[] args) {
+		new ChatClient();
+	}
+
+}

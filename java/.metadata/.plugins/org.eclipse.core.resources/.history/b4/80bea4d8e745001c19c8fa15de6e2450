@@ -1,0 +1,12 @@
+package n4_udp;
+
+import java.net.DatagramSocket;
+import java.net.SocketException;
+
+public class UDPSendExample {
+
+	public static void main(String[] args) throws Exception {
+		DatagramSocket datagramSocket = new DatagramSocket();
+	}	
+
+}

@@ -1,0 +1,37 @@
+package application;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+
+public class LoginController implements Initializable {
+
+	@FXML private Button btnLogin, btnJoin;
+	@FXML private TextField txtId, txtPass;
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		btnLogin.setOnAction(event->{
+			String titleText = txtId.getText();
+			System.out.println("id : " + titleText);
+			String pass = txtPass.getText();
+			System.out.println("Pass : " + pass);
+		});
+		
+		btnJoin.setOnAction(e->{
+			try {
+				Parent next = FXMLLoader.load(
+					getClass().getResource("Join.fxml")
+				);
+			} catch (IOException e1) {}
+		});
+	}
+
+}

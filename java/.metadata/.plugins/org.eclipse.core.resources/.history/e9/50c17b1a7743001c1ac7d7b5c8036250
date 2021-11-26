@@ -1,0 +1,10 @@
+package t05_control_method.notify_wait_1;
+
+public class ProduceThread extends Thread{
+	private DataBox databox;
+
+	public ProduceThread(DataBox databox) {
+		this.databox = databox;
+	}
+	
+}

@@ -1,0 +1,103 @@
+package c4_thread;
+
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
+
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+
+public class RootController implements Initializable {
+	
+	@FXML private Canvas bgCanvas,canvas1,canvas2,canvas3,canvas4;
+	@FXML private Button btnStart;
+	
+	GraphicsContext backgroundGC,gc1,gc2,gc3,gc4;
+	boolean isStart = true;
+	
+	int x,x1,x2,x3,x4;
+	
+	ArrayList<Thread> threadList = new ArrayList<>();
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		initBackGround();
+		initCar();
+		btnStart.setOnAction(event->{
+			for(Thread t : threadList) {
+				t.start();
+			}
+		});
+	}
+	
+	public void initBackGround() {
+		backgroundGC = bgCanvas.getGraphicsContext2D();
+		Image image = new Image(
+			getClass().getResource("img/sky.jpg").toString()
+		);
+		backgroundGC.drawImage(image, 0, 0, 600, 400);
+		backgroundGC.drawImage(image, 600, 0, 600, 400);
+		
+		Thread thread = new Thread(()->{
+			while(isStart) {
+				backgroundGC.clearRect(0, 0, bgCanvas.getWidth(), bgCanvas.getHeight());
+				backgroundGC.drawImage(image,x,0,600,400);
+				backgroundGC.drawImage(image,x+600,0,600,400);
+				x = x - 10;
+				if(x == -600) {
+					x = 0;
+				}
+				try {
+					Thread.sleep(100);
+				} catch (InterruptedException e) {}
+			}
+		});
+		threadList.add(thread);
+	}
+	
+	public void initCar(){
+		gc1 = canvas1.getGraphicsContext2D();
+		Image image1 = new Image(
+			getClass().getResource("img/car1.png").toString()
+		);
+		gc1.drawImage(image1, 0, 40);
+		gc2 = canvas2.getGraphicsContext2D();
+		Image image2 = new Image(
+			getClass().getResource("img/car3.png").toString()
+		);
+		gc2.drawImage(image2, 0, 40);
+		gc3 = canvas3.getGraphicsContext2D();
+		Image image3 = new Image(
+			getClass().getResource("img/car5.png").toString()
+		);
+		gc3.drawImage(image3, 0, 40);
+		gc4 = canvas4.getGraphicsContext2D();
+		Image image4 = new Image(
+			getClass().getResource("img/car7.png").toString()
+		);
+		gc4.drawImage(image4, 0, 40);
+		
+		Thread t1 = new Thread(()->{
+			x1 = 0;
+			while(isStart) {
+				int a = (int)(Math.random()*15)+5;
+			}
+		});
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

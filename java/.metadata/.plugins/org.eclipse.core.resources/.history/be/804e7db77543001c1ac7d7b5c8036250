@@ -1,0 +1,11 @@
+package t05_control_method.notify_wait;
+
+public class WriteObject {
+	synchronized public void methodA() {
+		System.out.println("methodA 사용");
+	}
+	
+	public synchronized void methodB() {
+		System.out.println("methodB 사용");
+	}
+}

@@ -1,0 +1,8 @@
+package test1029;
+
+public class Java {
+	
+	public static void main(String[] args) {
+	System.out.println("문자열을 입력해 주세요>>");	
+	}
+}

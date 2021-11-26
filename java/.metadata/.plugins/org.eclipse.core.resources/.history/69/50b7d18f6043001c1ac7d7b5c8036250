@@ -1,0 +1,17 @@
+package t04_synchronized;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class VectorTest {
+
+	public static void main(String[] args) {
+		List<String> array = new ArrayList<>();
+		Thread t1 = new Thread(()->{
+			for(int i=0; i<100; i++) {
+				array.add("최기근");
+			}
+		});
+	}
+
+}

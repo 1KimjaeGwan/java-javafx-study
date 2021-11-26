@@ -1,0 +1,10 @@
+package t05_control_method.notify_wait;
+
+public class NotifyWaitExample {
+
+	public static void main(String[] args) {
+		WriteObject obj = new WriteObject();
+		ThreadA a = new Thread(obj);
+	}
+
+}

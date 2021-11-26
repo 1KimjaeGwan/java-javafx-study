@@ -1,0 +1,8 @@
+package dao;
+
+import member.Member;
+
+public interface MemberDAO {
+	// 회원가입 
+	Member join(Member member);
+}

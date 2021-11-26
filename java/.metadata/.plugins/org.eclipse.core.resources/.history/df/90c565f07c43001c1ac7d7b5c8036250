@@ -1,0 +1,18 @@
+package t05_control_method.stop;
+
+class InterruptThread extends Thread{
+	public void run() {
+		while(true) {
+			System.out.println("실행중");
+		}
+	}
+}
+
+public class InterruptExample {
+
+	public static void main(String[] args) {
+		InterruptThread t = new InterruptThread();
+		t.start();
+	}
+
+}

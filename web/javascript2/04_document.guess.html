@@ -1,0 +1,81 @@
+<!-- 04_document.guess.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<script>
+    // 추측 횟수를 지정할 변수
+    let nGuesses = 0;
+    // 임의의 값을 지정할 변수
+                        // (0 ~ 99) + 1
+    let computerNum = parseInt(Math.random()*100) + 1;
+
+    function guess(){
+        console.log('button click!');
+        
+        let userobj = document.getElementById("user");
+        console.log(userobj);
+
+        let guessobj = document.getElementById("guess");
+        console.log(guessobj);
+
+        let hintobj = document.getElementById("hint");
+        console.log(hintobj);
+        
+        let number = userobj.value;
+
+        if(number == "" || isNaN(number) || number < 1 || number > 100){
+            alert("잘못된 값입니다.다시 입력해주세요.");
+            reSet();
+            return;
+        }
+
+        nGuesses++;
+
+        let hint = "";
+        if(computerNum == userobj.value){
+            hint = "성공입니다.";
+        }else if(userobj.value < computerNum){
+            hint = "정답보다 작습니다.";
+        }else{
+            hint = "정답보다 큽니다.";
+        }
+
+        hintobj.value = hint;
+        guessobj.value = nGuesses;
+    }
+
+    function reSet(){
+        let input = document.querySelectorAll("input");
+        for(let i=0; i < input.length; i++){
+            if(input[i].type != "button"){
+                input[i].value = "";
+                if(input[i].id == "user"){
+                    input[i].focus();   // 해당 요소에 포커스 상태를 추가
+                }
+            }
+        }
+    }
+
+    function reGame(){
+        computerNum = parseInt(Math.random()*100) + 1;
+        nGuesses = 0;
+        reSet();
+    }
+
+
+</script>
+</head>
+<body>
+    <h1>숫자 맞추기</h1>
+    <P>
+        임의로 생성된 숫자를 맞추는 게임 숫자는 1~100 사이
+    </P>
+    숫자 : <input type="text" id="user" placeholder="숫자입력"/>
+    <input type="button" onclick="guess();" value="확인"/> 
+    <input type="button" onclick="reGame();" value="다시하기"/> <br/>
+    추측횟수 : <input type="text" id="guess" readonly/> <br/>
+    힌트 : <input type="text" id="hint" readonly/>
+</body>
+</html>

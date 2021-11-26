@@ -1,0 +1,9 @@
+package t08_thread_pool;
+
+public class ExecuteExample {
+
+	public static void main(String[] args) {
+		// 조기 스레드 수 : ExecutorService 객체가 생성될때 기본적으로 생성되는 스레드 수
+	}
+
+}

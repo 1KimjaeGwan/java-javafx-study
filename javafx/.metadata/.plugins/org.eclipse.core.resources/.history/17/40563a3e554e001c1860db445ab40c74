@@ -1,0 +1,13 @@
+/* UI Implementation */
+
+cBox{
+	-fx-text-color:#792c35;
+}
+
+btnSi{
+	-fx-text-color:#005eff;
+}
+
+btnSu{
+	-fx-text-color:#399e2f;
+}

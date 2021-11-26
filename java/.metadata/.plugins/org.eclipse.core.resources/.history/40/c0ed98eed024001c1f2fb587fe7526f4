@@ -1,0 +1,20 @@
+
+public class VariableTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*
+		 * *comments 주석 다중 행 주석
+		 */
+		// byte type의 bNum 변수 선언
+		byte bNum;
+		// System.out.println(넘겨받은값)
+		// 넘겨받은 값을 console 에 출력
+		
+		// bNum 변수의 값을 127로 초기화
+		bNum = 127;
+		System.out.println(bNum);
+		
+	}
+
+}

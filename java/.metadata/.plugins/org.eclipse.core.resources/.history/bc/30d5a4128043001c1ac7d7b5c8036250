@@ -1,0 +1,14 @@
+package t06_daemon;
+
+public class ParentThread extends Thread{
+	private ChildThread thread;
+	
+	public ParentThread(ChildThread thread) {
+		this.thread = thread;
+	}
+	public void run() {
+		
+	}
+	
+
+}

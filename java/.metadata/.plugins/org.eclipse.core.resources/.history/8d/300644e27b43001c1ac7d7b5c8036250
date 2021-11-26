@@ -1,0 +1,13 @@
+package t05_control_method.stop;
+
+class PrintThread extends Thread{
+	public boolean isRun = true;
+}
+
+public class StopFlagExample {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

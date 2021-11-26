@@ -1,0 +1,9 @@
+package t05_control_method.yield;
+
+public class YieldExample {
+
+	public static void main(String[] args) {
+
+	}
+
+}

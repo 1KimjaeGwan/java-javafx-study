@@ -1,0 +1,10 @@
+package t01_create_thread;
+
+public class PrintTask implements Runnable{
+
+	@Override
+	public void run() {
+	}
+
+	
+}

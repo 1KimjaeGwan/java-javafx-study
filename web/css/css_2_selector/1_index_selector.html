@@ -1,0 +1,50 @@
+<!-- css_2_selecotr/1_index_selector.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<style>
+    h1{
+        color: red;
+    }
+
+    *{
+        color: greenyellow;
+    }
+
+    /* id = #
+       class = .  */
+    #bg{
+        background-color: skyblue;
+    }
+
+    #color{
+        color: gray;
+    }
+
+    .size{
+        /* 글자 크기 */
+        font-size: 50px;
+    }
+
+    .color{
+        color: skyblue;
+    }
+    h2{
+        color:hotpink;
+    }
+</style>
+</head>
+<body>
+    <!-- id="color" -->
+    <h1>type 선택자</h1>
+    <h2 id="bg">ID 선택자 1</h2>
+    <h2 id="color" style="color:black;">ID 선택자 2</h2>
+    <h2 id="color bg">ID 선택자 3</h2>  
+    <h2 id="color" class="size color">CLASS ID 선택자</h2>
+</body>
+</html>
+
+
+inline > id > class > type > * 우선순위

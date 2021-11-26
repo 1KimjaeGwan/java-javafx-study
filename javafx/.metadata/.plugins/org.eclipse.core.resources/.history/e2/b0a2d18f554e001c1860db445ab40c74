@@ -1,0 +1,13 @@
+/* UI Implementation */
+
+cBox{
+	-fx-text-fill:#792c35;
+}
+
+btnSi{
+	-fx-text-fill:#005eff;
+}
+
+btnSu{
+	-fx-text-fill:#399e2f;
+}

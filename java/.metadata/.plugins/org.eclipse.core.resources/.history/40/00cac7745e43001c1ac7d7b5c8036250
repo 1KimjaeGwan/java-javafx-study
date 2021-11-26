@@ -1,0 +1,13 @@
+package t04_synchronized;
+
+class User1Thread extends Thread{
+	private Calculator calc;
+}
+
+public class SynchronizedTest {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+<!-- 14_bom_window.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<script>
+    let win;
+
+    function openWindow(){
+        win = window.open('','_blank','width=350,height=400,top=200,left=200');
+        win.document.write("<img src='img/pome.png'/>");
+        // 모니터 기준 절대 좌표로 이동.
+        win.moveTo(100,100);
+    }
+    function moveWindow(){
+        // 현재 자기의 창을 기준으로 상대 위치 만큼 이동
+        win.moveBy(10,20);
+    }
+</script>
+</head>
+<body>
+    <button onclick="openWindow();">window 창 오픈</button> <br/>
+    <button onclick="moveWindow();">window 창 이동</button> <br/>
+</body>
+</html>

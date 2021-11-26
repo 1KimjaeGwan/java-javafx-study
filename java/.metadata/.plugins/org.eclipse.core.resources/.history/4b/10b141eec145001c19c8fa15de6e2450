@@ -1,0 +1,13 @@
+package n2_socket_serverSocket;
+
+import java.net.Socket;
+
+public class ClientExample {
+
+	public static void main(String[] args) {
+		System.out.println("[ 서버에 연결 요청 ]");
+		Socket socket = new Socket("192.168.1.97",5001);
+		System.out.println("[ 서버연결완료 ]");
+	}
+
+}

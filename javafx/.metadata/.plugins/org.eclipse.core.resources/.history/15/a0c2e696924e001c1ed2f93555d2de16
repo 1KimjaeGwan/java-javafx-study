@@ -1,0 +1,5 @@
+
+
+#bgimg{
+		-fx-background-image:url(waiting.jpg);
+	}

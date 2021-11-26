@@ -1,0 +1,10 @@
+package dao;
+
+import member.Member;
+
+public interface MemberDAO {
+	// 회원가입 
+	// 회원정보를 저장하고 있는 member를 넘겨받아서
+	// 회원정보를 테이블에 추가하고 등록된 회원 정보를 반환
+	Member join(Member member);
+}

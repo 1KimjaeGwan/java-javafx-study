@@ -1,0 +1,108 @@
+<!-- 5_struct_selector.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<style>
+    div#wrap{
+        /* 너비 폭*/
+        width: 260px;
+        /* 높이 */
+        height: 300px;
+        /* 배경 색상 */
+        background-color: skyblue;
+        overflow: hidden;
+        /* overflow: scroll; */
+    }
+
+    .box{
+        width: 30px;
+        height: 30px;
+        /* 외곽선 */
+        /* 선두께 선모양 선색상 */
+        border:1px solid black;
+
+        float: left;
+        /* float:right; */
+
+        margin: 0 5px 5px 0;
+        /* padding-left: 3px; */
+    }
+
+    .box:first-child{
+        color: red;
+    }
+
+    .box:last-child{
+        color: blue;
+    }
+
+    .box:nth-child(2){
+        color: yellow;
+    }
+
+    .box:nth-child(7n){
+        color: red;
+    }
+
+    .box:nth-child(7n-1){
+        color: blue;
+    }
+    /* 2의 배수 : 짝수 */
+    .box:nth-child(2n){
+        color: white;
+    }
+    /* 2의 배수 -1 : 홀수 */
+    .box:nth-child(2n-1){
+        color: blue;
+    }
+
+    .box:nth-child(odd){
+        color: red;
+    }
+
+    .box:nth-child(even){
+        color: pink;
+    }
+
+</style>
+</head>
+<body>
+    <!-- div#wrap>div.box{$}*31 -->
+    <!-- div#wrap>div.box{$$}*31 -->
+    <div id="wrap">
+        <div class="box">01</div>
+        <div class="box">02</div>
+        <div class="box">03</div>
+        <div class="box">04</div>
+        <div class="box">05</div>
+        <div class="box">06</div>
+        <div class="box">07</div>
+        <div class="box">08</div>
+        <div class="box">09</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+        <div class="box">13</div>
+        <div class="box">14</div>
+        <div class="box">15</div>
+        <div class="box">16</div>
+        <div class="box">17</div>
+        <div class="box">18</div>
+        <div class="box">19</div>
+        <div class="box">20</div>
+        <div class="box">21</div>
+        <div class="box">22</div>
+        <div class="box">23</div>
+        <div class="box">24</div>
+        <div class="box">25</div>
+        <div class="box">26</div>
+        <div class="box">27</div>
+        <div class="box">28</div>
+        <div class="box">29</div>
+        <div class="box">30</div>
+        <div class="box">31</div>
+    </div>
+</body>
+</html>

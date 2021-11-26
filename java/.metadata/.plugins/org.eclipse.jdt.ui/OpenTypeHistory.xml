@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=14_interface/C:\/Program Files\/Java\/jre1.8.0_301\/lib\/rt.jar=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;java.rmi(Remote.class[Remote" modifiers="1537" timestamp="1633311108995"/>
+<typeInfo handle="=14_interface/src&lt;d.cooperation{DatabaseAccessObject.java[DatabaseAccessObject" modifiers="513" timestamp="1634707072160"/>
+<typeInfo handle="=23_database/src&lt;mysql.dao{BookDAO.java[BookDAO" modifiers="513" timestamp="1636438320400"/>
+<typeInfo handle="=24_database_practice/src&lt;dao{AccountDAO.java[AccountDAO" modifiers="513" timestamp="1636506423225"/>
+<typeInfo handle="=24_database_practice/src&lt;dao{MemberDAO.java[MemberDAO" modifiers="513" timestamp="1636610507037"/>
+<typeInfo handle="=26_thread/C:\/Program Files\/Java\/jre1.8.0_301\/lib\/rt.jar=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;java.lang(Thread.class[Thread" modifiers="33" timestamp="1633311108995"/>
+<typeInfo handle="=chat_server/C:\/Program Files\/Java\/jre1.8.0_301\/lib\/rt.jar=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;java.lang(Runnable.class[Runnable" modifiers="1537" timestamp="1633311108995"/>
+</typeInfoHistroy>

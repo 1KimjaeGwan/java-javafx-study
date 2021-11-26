@@ -1,0 +1,5 @@
+package t05_control_method.notify_wait;
+
+public class ThreadA {
+
+}

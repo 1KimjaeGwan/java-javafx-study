@@ -1,0 +1,48 @@
+package server;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.InetSocketAddress;
+import java.net.ServerSocket;
+import java.util.Hashtable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class ChatServer {
+	
+	public static final String IP ="192.168.1.97";
+	public static final int PORT = 5001;
+	
+	ServerSocket serverSocket; // client 연결 수락 및 정보확인
+	
+	// client들의 정보 저장
+	// id(key), 출력 스트림(value)
+	static Hashtable<String,PrintWriter> ht;
+	// thread pool
+	static ExecutorService serverPool; 
+	
+	public ChatServer() {
+		try {
+			serverPool = Executors.newFixedThreadPool(30); // 최대 30개 스레드를 생성 및 관리
+			serverSocket = new ServerSocket();
+			serverSocket.bind(new InetSocketAddress(IP,PORT));
+		} catch (IOException e) {
+			System.out.println("bind 할 수 없는 IP 또는 PORT 입니다."+e.getMessage());
+			return;
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		new ChatServer();
+	}
+
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+package iteration_statement;
+
+public class WhileStatementTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

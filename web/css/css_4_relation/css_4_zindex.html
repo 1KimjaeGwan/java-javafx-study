@@ -1,0 +1,57 @@
+<!-- css_4_zindex.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<style>
+    div{
+        position: absolute;
+    }
+
+    .index1{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        top: 20px;
+        left: 20px;
+        z-index: 10;
+    }
+
+    .index2{
+        width: 100px;
+        height: 200px;
+        background-color: skyblue;
+        top: 40px;
+        left: 40px;
+        z-index: 5;
+    }
+
+    .index3{
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        top: 60px;
+        left: 60px;
+        z-index: 7;
+    }
+
+    .index4{
+        top: 70px;
+        left: 70px;
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        z-index: 10000;
+    }
+</style>
+</head>
+<body>
+    <!-- div.index$*3 -->
+    <div class="index1"></div>
+    <div class="index2">
+        <div class="index4"></div>
+    </div>
+    <div class="index3"></div>
+</body>
+</html>

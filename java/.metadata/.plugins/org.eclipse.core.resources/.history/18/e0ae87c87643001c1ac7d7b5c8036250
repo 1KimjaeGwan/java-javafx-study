@@ -1,0 +1,23 @@
+package t05_control_method.notify_wait_1;
+
+public class DataBox {
+	private String data;
+
+	public String getData() {
+		String value = this.data;
+		this.data = null;
+		System.out.println("읽은 데이터 : " + value);
+		return value;
+	}
+
+	public void setData(String data) {
+		if(this.data != null) {
+			System.out.println("이미 데이터가 존재합니다.");
+		}else {
+			this.data = data;
+			System.out.println("생성한 데이터 : " + data);
+		}
+	}
+	
+	
+}

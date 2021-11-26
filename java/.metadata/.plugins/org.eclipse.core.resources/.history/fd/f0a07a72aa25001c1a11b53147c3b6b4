@@ -1,0 +1,18 @@
+package iteration_statement;
+
+import java.util.Scanner;
+
+public class WhileStatementTest {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		boolean isRun = true;
+		
+		while(isRun) {
+			System.out.println("구구단의 단수를 입력해주세요!");
+			isRun = sc.hasNextInt();
+			int i = sc.nextInt();
+			System.out.println(i);
+		}
+	}
+}

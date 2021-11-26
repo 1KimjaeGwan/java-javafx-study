@@ -1,0 +1,6 @@
+package t04_synchronized;
+
+public class Calculator {
+	
+	private int memory;
+}

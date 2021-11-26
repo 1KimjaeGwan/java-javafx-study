@@ -1,0 +1,4 @@
+/* project */
+#bgimg{
+	-fx-background-image:"img/waiting.jpg";
+}

@@ -1,0 +1,32 @@
+<!-- 01_async_defer_external.html -->
+<!DOCTYPE html
+html lane="ko">
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<!-- <script src="00_external.js"></script> -->
+<!-- 
+    [parsing HTML][          blocked         ][parsing HTML]
+                  [fetching js][execcution js]
+ -->
+<!-- <script async src="00_external.js"></script> -->
+<!-- 
+        [parsing HTML][  blocked  ][parsing HTML]
+        [fetching js ][execting js]
+ -->
+ <script src="00_external.js"></script>
+ <!-- 
+        [parsing HTML] page is ready [executing js]
+        [fetching js ]
+  -->
+</head>
+<body>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur blanditiis libero iusto sunt aut adipisci neque ab saepe hic quisquam. Deserunt tempore quae non. Iure repellat illum, placeat nemo ipsam commodi exercitationem aut, itaque doloremque, laborum nesciunt accusantium omnis? Magni aliquam exercitationem dolore ratione itaque non nam, molestiae corrupti odio in ipsa ipsum reiciendis ut voluptas! Ratione, veniam neque vitae alias excepturi ea cupiditate ullam fuga quidem quod nihil culpa distinctio! A sed itaque quidem quibusdam numquam quia sequi quisquam dolorum optio incidunt facilis eveniet architecto non ea doloremque voluptas aut, cum dolorem. Voluptate beatae cumque aut laboriosam, animi consectetur?</div>
+    <!-- <script src="00_external.js"></script> -->
+    <!-- 
+        사용자가 기본적인 HTML content를 빨리 볼 수 있다.
+
+        [parsing HTML][fetching js][execution js] 
+    -->
+</body>
+</html>

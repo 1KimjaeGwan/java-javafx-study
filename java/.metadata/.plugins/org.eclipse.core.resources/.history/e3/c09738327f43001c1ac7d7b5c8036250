@@ -1,0 +1,13 @@
+package t06_daemon;
+
+public class DaemonExample {
+
+	public static void main(String[] args) {
+		AutoSaveThread t = new AutoSaveThread();
+		t.start();
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {}
+	}
+
+}

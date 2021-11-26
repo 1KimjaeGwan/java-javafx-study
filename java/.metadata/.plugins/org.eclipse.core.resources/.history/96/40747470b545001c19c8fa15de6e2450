@@ -1,0 +1,13 @@
+package n1_inetaddress_url;
+
+import java.net.URL;
+
+public class URLExample {
+
+	public static void main(String[] args) {
+		// web 환경 또는 Local 환경에서의 특정 자원(resource)의
+		// 위치 정보를 저장하는 class
+		URL url = new URL;
+	}
+
+}

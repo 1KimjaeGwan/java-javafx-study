@@ -1,0 +1,16 @@
+package iteration_statement;
+
+public class ForStatementTest {
+
+	public static void main(String[] args) {
+		// 연속된 연산을 반복하며수행하는 문장
+		int sum = 1+2+3+4+5+6+7+8+9+10;
+		sum = 0;
+		for(int i=1; i<11; i++) {
+			sum = sum + i;
+		}
+		System.out.println(i);
+		System.out.println("1~10의 합은 : " + sum);
+
+	} // main 종료
+}

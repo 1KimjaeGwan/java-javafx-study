@@ -1,0 +1,21 @@
+package t03_state;
+
+public class StatePrintThread extends Thread{
+	
+	Thread targetThread;
+	
+	public StatePrintThread(Thread targetThread) {
+		this.targetThread = targetThread;
+	}
+	
+	public void run() {
+		while(true) {
+			Thread.State state = targetThread.getState();
+			
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {}
+		}
+	}
+	
+}

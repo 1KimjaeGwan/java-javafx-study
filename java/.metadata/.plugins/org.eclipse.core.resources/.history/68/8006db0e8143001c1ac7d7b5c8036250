@@ -1,0 +1,9 @@
+package t06_daemon;
+
+public class ThreadInfoExample {
+
+	public static void main(String[] args) {
+
+	}
+
+}
